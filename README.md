@@ -1,7 +1,17 @@
 Example Question Type Plugin for Ripple
 ======
 
-This plugin creates a Ripple question type of "Example." It can used as the minimal code needed to create a question type plugin.
+This plugin creates a Ripple question type of "Example." It can used as the minimal code needed to create a question type plugin. To create your own plugin, make these changes:
+* In index.js
+** change 'pluginName' to the name of your plugin. 
+```
+NOTE!!! The name can not have spaces.
+```
+** change 'qTypeEX' object paramters to match your plugin
+* In js/example.js
+**	change everywhere 'example' is found to your plugin name used in index.js
+
+There are methods and properties available in the api documentation for plugins.
 
 There is no configuration for this plugin.
 
