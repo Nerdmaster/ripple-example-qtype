@@ -1,0 +1,10 @@
+{
+  "author": "William Myers",
+  "title": "Example - Custom Question Type",
+  "description": "Plugin adds an example question type",
+  "name": "example-question-type",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+  }
+}
