@@ -5,9 +5,9 @@ var pluginName = "example"
   , questionType
   , EX = {};
 
-module.exports = EX;
+module.exports.plugin = EX;
 
-EX.onEnable = function() {
+EX.enable = function() {
   api = module.exports.pluginManager.api
   log = api.logger.logPair
   questionType = api.questionType
@@ -37,7 +37,7 @@ var qTypeEX = {
   icon: "icon-beer",
   js: "/plugins/example-question-type/js/example.js"
 }
-EX.onDisable = function() {
+EX.disable = function() {
   console.log("Disabled Example");
   api.questionType.remove(pluginName, function(err, removed){
     if( err || !removed) api.logger.error(err);
@@ -46,5 +46,5 @@ EX.onDisable = function() {
 };
 
 // Handlers
-EX.handlers = {};
+//EX.handlers = {};
 

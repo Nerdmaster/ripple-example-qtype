@@ -18,23 +18,25 @@ RIPPLE.questionType['example'].session = function(){
     DISPLAY.updateIndResp(name,answer);    
   };
   
-  var clearAns = function(){
+  var displayReset = function(){
     DISPLAY.answers("");
   }
+
   return {
     recieveAnswerFn: recAns,
-    clearAnsValsFn: clearAns
+    displayResetFn: displayReset
   }
 
 };
 
 RIPPLE.questionType['example'].client = function(){
   var CC = RIPPLE.client.controller
-    , inputID = "example";
+    , inputID = "example"
+    , qID;
 
-  var display = function(){
+  var display = function( questionObj ){
     var html = '<input type="textbox" id="' + inputID + '"/>';
-
+    qID = questionObj.qID
     CC.showAnswer( html );
     CC.sendBtn.show()
     CC.sendBtn.enable();
@@ -43,7 +45,7 @@ RIPPLE.questionType['example'].client = function(){
   var send = function(elem){
     var ansInput = $('#'+inputID)
     CC.answer = ansInput.val();
-    now.distributeAnswer( CC.answer );
+    now.distributeAnswer( {answer:CC.answer, qID: qID} );
     CC.sendBtn.hide()
   };
 
