@@ -5,9 +5,9 @@ This plugin creates a Ripple question type of "Example." It can used as the mini
 
 1. In index.js, change _'pluginName'_ to the name of your plugin. 
 
-```
-NOTE!!! The name can not have spaces.
-```
+    ```
+    NOTE!!! The name can not have spaces.
+    ```
 
 2. In index.js, change 'qTypeEX' object paramters to match your plugin
 
@@ -15,6 +15,7 @@ NOTE!!! The name can not have spaces.
 
 There are additional methods and properties available in the [api documentation](http://ripple-core.uoregon.edu/api/latest)
 for plugins if you are looking for further functionality.
+
 
 Install
 -------
